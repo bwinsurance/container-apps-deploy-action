@@ -592,7 +592,7 @@ runs:
         docker build \
           --tag ${{ env.CA_GH_ACTION_IMAGE_TO_DEPLOY }} \
           --file ${{ env.CA_GH_ACTION_DOCKERFILE_PATH }} \
-          ${{ env.CA_GH_ACTION_DOCKERFILE_BUILD_ARGS:-'' }} \
+          ${{ env.CA_GH_ACTION_DOCKERFILE_BUILD_ARGS }} \
           ${{ inputs.appSourcePath }}
 
     - name: Push image to Container Registry
